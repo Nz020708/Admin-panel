@@ -1,5 +1,4 @@
-﻿@using WebApplication1.Models
-@using WebApplication1.ViewModels
+﻿
 @model HomeVM
 @{
     ViewData["Title"] = "Index";
@@ -10,24 +9,38 @@
 
     <section id="slider">
         <div class="owl-carousel slider">
-            @foreach (var slide in Model.Slides)
-            {
-                <div> <img src="~/img/@slide.Url" alt=""></div>
+            @*@foreach (var slide in Model.Slides)
+        {
+            <div> <img src="~/img/@slide.Url" alt=""></div>
 
-            }
+        }*@
+            <div> <img src="img/h3-slider-background.jpg" alt=""> </div>
+            <div> <img src="img/h3-slider-background-2.jpg" alt=""> </div>
+            <div> <img src="img/h3-slider-background-3.jpg" alt=""> </div>
 
         </div>
         <div class="container context pl-lg-5 ml-lg-3">
             <div class="row">
                 <div class="col-lg-5">
+                    @*<div class="text">
+            @Html.Raw(Model.Summary.Title)
+            <p class="text-black-50 d-none d-sm-block">
+                @Model.Summary.Description
+            </p>
+        </div>
+        <div class="img">
+            <img src="img/@Model.Summary.Img" alt="">
+        </div>*@
                     <div class="text">
-                        @Html.Raw(Model.Summary.Title)
+                        <h1>Send <span>flowers</span> like</h1>
+                        <h1>you mean it</h1>
                         <p class="text-black-50 d-none d-sm-block">
-                            @Model.Summary.Description
+                            Where flowers are our inspiration to create lasting memories. Whatever the occasion, our flowers will
+                            make it special cursus a sit amet mauris.
                         </p>
                     </div>
                     <div class="img">
-                        <img src="img/@Model.Summary.Img" alt="">
+                        <img src="img/h2-sign-img.png" alt="">
                     </div>
                 </div>
             </div>
@@ -46,22 +59,34 @@
                             <i class="fas fa-caret-down"></i>
                             <ul class="category list-unstyled" style="display: none;">
                                 <li><a href="" data-id="all">All</a></li>
-                                @foreach (var ct in Model.Categories)
-                                {
-                                    <li><a href="#" data-id="@ct.Name.ToLower()">@ct.Name</a></li>
+                                @*@foreach (var ct in Model.Categories)
+        {
+            <li><a href="#" data-id="@ct.Name.ToLower()">@ct.Name</a></li>
 
-                                }
+        }*@
+                                <li><a href="" data-id="popular">Popular</a></li>
+                                <li><a href="" data-id="winter">Winter</a></li>
+                                <li><a href="" data-id="various">Various</a></li>
+                                <li><a href="" data-id="exotic">Exotic</a></li>
+                                <li><a href="" data-id="green">Greens</a></li>
+                                <li><a href="" data-id="cactuse">Cactuses</a></li>
 
                             </ul>
                         </li>
                     </ul>
                     <ul class="category d-none d-md-flex list-unstyled">
                         <li><a href="" data-id="all">All</a></li>
-                        @foreach (var ct in Model.Categories)
-                        {
-                            <li><a href="#" data-id="@ct.Name.ToLower()">@ct.Name</a></li>
+                        @*@foreach (var ct in Model.Categories)
+        {
+            <li><a href="#" data-id="@ct.Name.ToLower()">@ct.Name</a></li>
 
-                        }
+        }*@
+                        <li><a href="" data-id="popular">Popular</a></li>
+                        <li><a href="" data-id="winter">Winter</a></li>
+                        <li><a href="" data-id="various">Various</a></li>
+                        <li><a href="" data-id="exotic">Exotic</a></li>
+                        <li><a href="" data-id="green">Greens</a></li>
+                        <li><a href="" data-id="cactuse">Cactuses</a></li>
                     </ul>
                     <ul class="list-unstyled">
                         <li>
